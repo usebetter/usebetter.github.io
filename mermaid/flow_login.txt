@@ -1,0 +1,9 @@
+flowchart TD
+    Signup[SignUp Page] -->|Enter Email, password and Display Name| Btn_Signup(Register Button)
+    Btn_Signup -->|AWS Amplify signup| OTP[Verify Email Page]
+    OTP -->  |One Time Password sent to your email | OTP_Verify[OTP Verification ]
+    
+    OTP_Verify -->|Enter OTP from your email| OTP_Decide{is OTP correct?}
+    OTP_Decide --> Home[Home Page]
+    OTP_Decide --> Error[Error Verify Email Message]
+    Error --> |Redo OTP flow| OTP
