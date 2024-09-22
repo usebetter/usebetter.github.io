@@ -21,14 +21,24 @@ mindmap
             Email Sign Up
             Google SignIn
             Apple SignIn
-        User Feed
-            Use Cache
-        Friends Feed
-            Friends Cache
-        User Table Model
-        Friends Map Table Model
-        License Table Model
+        Data Models
+            User Feed
+                Use Cache
+            Friends Feed
+                Friends Cache
+        Database Models
+            User Table Model
+            Friends Map Table Model
+            Transaction Table Model
+            License Table Model
 
+        Screens
+            Login Page
+            Home Page
+            Add item
+            Your Items
+            Profile
+            Manage Friends
 
 ```
 
@@ -46,9 +56,10 @@ mindmap
                         item_name.png
                     items.json
         DynamoDB
-            User Info Table
+            User Info Table              
             Friends Map Table
-            Transaction Table
+            Event Table
+            License Table
 
         Amplify
             interface for cognito
@@ -63,6 +74,34 @@ mindmap
 
 ```
 
+## DynamoDB Table map
+```mermaid
+mindmap
+    ((AWS DynamoDB))
+        UserInfo Table
+            Email
+            UserId
+            IdentityId
+            DisplayName
+            FCMToken                
+        FriendsMap Table
+            user Id
+            Friend Id
+            Circle Name
+        Event Table
+            Item Id
+            Owner Id
+            Receiver Id
+            State
+        License Table
+            user Id
+            License state
+            License type
+            startedOn
+            expiredOn
+            OS_Type
+```
+
 ## Firebase Backend Component Diagram
 
 ```mermaid
@@ -74,6 +113,11 @@ mindmap
             Apple push notification service (APNS)
             Google push notifications
         Analytics
+            Page Visits
+            Button Clicks
+            Sign In
+            Sign up
+            Custom Events
         Crashlytics
 
 ```
